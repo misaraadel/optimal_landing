@@ -168,7 +168,7 @@
 header {
   .item {
     width: 100%;
-    padding: 140px 0px 250px 0px;
+    padding: 180px 0px 250px 0px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -376,7 +376,6 @@ header {
       width: 70px;
       height: 70px;
       object-fit: contain;
-      margin: auto;
     }
 
     h2 {
@@ -388,6 +387,46 @@ header {
 
     .buttons-contain {
       justify-content: center;
+      margin-bottom: 20px;
+
+      .btn-contain {
+        width: 100% !important;
+      }
+    }
+
+    .data li {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      margin-bottom: 15px;
+
+      img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+
+        &.sucess {
+          filter: invert(46%) sepia(86%) saturate(4550%) hue-rotate(177deg) brightness(95%) contrast(101%);
+        }
+
+        &.close {
+          filter: invert(29%) sepia(0%) saturate(1236%) hue-rotate(147deg) brightness(102%) contrast(84%);
+        }
+      }
+
+      span {
+        padding-inline-start: 10px;
+        font-size: 15px;
+        font-weight: 500;
+
+        &.sucess {
+          color: #000;
+        }
+
+        &.close {
+          color: #444;
+        }
+      }
     }
 
     &:hover {
@@ -673,7 +712,7 @@ header {
 
 footer {
   width: 100%;
-  padding: 80px 0px;
+  padding: 200px 0px 50px 0px;
   background: linear-gradient(45deg, #00466A 0%, #008BD2 100%);
   z-index: 9;
   position: relative;
@@ -683,11 +722,23 @@ footer {
     content: '';
     position: absolute;
     width: 100%;
+    height: 116%;
+    background: url('../images/curve_shape.png') top left / cover no-repeat;
+    transform: scaleY(-1);
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
     height: 100%;
     background: url('../images/footer_pattern.webp') center / cover no-repeat;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -2;
     animation: scaling 10s linear infinite alternate;
   }
 
@@ -707,7 +758,7 @@ footer {
     }
 
     p {
-      color: rgba($color: #fff, $alpha: 0.710);
+      color: rgba($color: #000, $alpha: 0.710);
       font-size: 16px;
       font-weight: 500;
       line-height: 25px;
@@ -722,7 +773,7 @@ footer {
 
       .nav-item {
         padding: 0px 10px;
-        border-inline-end: 1px solid rgba($color: #fff, $alpha: 0.210);
+        border-inline-end: 1px solid rgba($color: #000, $alpha: 0.210);
 
         &:last-child {
           padding-inline-end: 0px !important;
@@ -741,7 +792,7 @@ footer {
           font-size: 13px;
           font-weight: 700;
           line-height: 19px;
-          color: #fff;
+          color: #000;
           position: relative;
         }
       }
@@ -880,5 +931,23 @@ footer {
 
   .contact-us .content .form-box {
     padding: 20px 15px !important;
+  }
+
+  footer {
+    &::after {
+      height: 32%;
+    }
+
+    p, a, li {
+      color: #fff !important;
+    }
+
+    li {
+      border-color: #fff !important;
+    }
+  }
+
+  header .item {
+    padding-bottom: 100px !important;
   }
 }

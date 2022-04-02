@@ -25,12 +25,12 @@
 }
 
 *::-moz-selection {
-  background-color: #368B85;
+  background-color: #008BD2;
   color: #fff;
 }
 
 *::selection {
-  background-color: #368B85;
+  background-color: #008BD2;
   color: #fff;
 }
 
@@ -1450,7 +1450,7 @@ ul {
 
 header .item {
   width: 100%;
-  padding: 140px 0px 250px 0px;
+  padding: 180px 0px 250px 0px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1694,7 +1694,6 @@ header .item .image-content iframe {
   height: 70px;
   -o-object-fit: contain;
      object-fit: contain;
-  margin: auto;
 }
 
 .bundles .box h2 {
@@ -1708,6 +1707,55 @@ header .item .image-content iframe {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 20px;
+}
+
+.bundles .box .buttons-contain .btn-contain {
+  width: 100% !important;
+}
+
+.bundles .box .data li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-bottom: 15px;
+}
+
+.bundles .box .data li img {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.bundles .box .data li img.sucess {
+  -webkit-filter: invert(46%) sepia(86%) saturate(4550%) hue-rotate(177deg) brightness(95%) contrast(101%);
+          filter: invert(46%) sepia(86%) saturate(4550%) hue-rotate(177deg) brightness(95%) contrast(101%);
+}
+
+.bundles .box .data li img.close {
+  -webkit-filter: invert(29%) sepia(0%) saturate(1236%) hue-rotate(147deg) brightness(102%) contrast(84%);
+          filter: invert(29%) sepia(0%) saturate(1236%) hue-rotate(147deg) brightness(102%) contrast(84%);
+}
+
+.bundles .box .data li span {
+  -webkit-padding-start: 10px;
+          padding-inline-start: 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.bundles .box .data li span.sucess {
+  color: #000;
+}
+
+.bundles .box .data li span.close {
+  color: #444;
 }
 
 .bundles .box:hover {
@@ -2071,7 +2119,7 @@ header .item .image-content iframe {
 
 footer {
   width: 100%;
-  padding: 80px 0px;
+  padding: 200px 0px 50px 0px;
   background: linear-gradient(45deg, #00466A 0%, #008BD2 100%);
   z-index: 9;
   position: relative;
@@ -2082,11 +2130,24 @@ footer::after {
   content: '';
   position: absolute;
   width: 100%;
+  height: 116%;
+  background: url("../images/curve_shape.png") top left/cover no-repeat;
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  width: 100%;
   height: 100%;
   background: url("../images/footer_pattern.webp") center/cover no-repeat;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -2;
   -webkit-animation: scaling 10s linear infinite alternate;
           animation: scaling 10s linear infinite alternate;
 }
@@ -2119,7 +2180,7 @@ footer .content .brand-name img {
 }
 
 footer .content p {
-  color: rgba(255, 255, 255, 0.71);
+  color: rgba(0, 0, 0, 0.71);
   font-size: 16px;
   font-weight: 500;
   line-height: 25px;
@@ -2143,8 +2204,8 @@ footer .content .footer-navbar-nav {
 
 footer .content .footer-navbar-nav .nav-item {
   padding: 0px 10px;
-  -webkit-border-end: 1px solid rgba(255, 255, 255, 0.21);
-          border-inline-end: 1px solid rgba(255, 255, 255, 0.21);
+  -webkit-border-end: 1px solid rgba(0, 0, 0, 0.21);
+          border-inline-end: 1px solid rgba(0, 0, 0, 0.21);
 }
 
 footer .content .footer-navbar-nav .nav-item:last-child {
@@ -2171,7 +2232,7 @@ footer .content .footer-navbar-nav .nav-item .nav-link {
   font-size: 13px;
   font-weight: 700;
   line-height: 19px;
-  color: #fff;
+  color: #000;
   position: relative;
 }
 
@@ -2316,6 +2377,18 @@ footer .content .socail-media li a img:hover {
   }
   .contact-us .content .form-box {
     padding: 20px 15px !important;
+  }
+  footer::after {
+    height: 32%;
+  }
+  footer p, footer a, footer li {
+    color: #fff !important;
+  }
+  footer li {
+    border-color: #fff !important;
+  }
+  header .item {
+    padding-bottom: 100px !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -37,6 +37,11 @@ $(document).ready(function () {
         $('body').toggleClass('overflowNone')
     });
 
+    $("[data-fancybox]").fancybox({
+        selector: '[data-fancybox="images"]',
+        loop: true
+    });
+
     $('.owl-header').owlCarousel({
         rtl: true,
         loop:true,

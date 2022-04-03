@@ -530,6 +530,126 @@ header {
   }
 }
 
+.training {
+  width: 100%;
+  padding: 50px 0px;
+  background-color: #fff;
+
+  .box {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 139, 210, 0.06);
+    border-radius: 10px;
+    transition: all .3s linear;
+    overflow: hidden;
+
+    .image-content {
+      width: 100%;
+      height: 250px;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .play-btn{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        color: #ddd;
+        
+        i{
+          position: relative;
+          font-size: 25px;
+          z-index: 5;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          z-index: 0;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50% , -50%);
+          display: block;
+          width: 60px;
+          height: 60px;
+          background: #000;
+          border-radius: 50%;
+          animation: pulse-border 1500ms ease-out infinite;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          z-index: 1;
+          left: 50%;
+          top: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          display: block;
+          width: 60px;
+          height: 60px;
+          background: #000;
+          border-radius: 50%;
+          transition: all 200ms;
+        }
+        &:hover{
+          color: #fff !important;
+        }
+    }
+    }
+
+    .content {
+      width: 100%;
+      padding: 20px 10px;
+    }
+
+    h2 {
+      color: #000;
+      font-size: 20px;
+      font-weight: 900;
+      margin: 20px 0px;
+      text-align: center;
+    }
+
+    .buttons-contain {
+      justify-content: center;
+      margin-bottom: 20px;
+
+      .btn-contain {
+        width: 100% !important;
+      }
+    }
+
+    p {
+      color: #666;
+      font-size: 15px;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .list li {
+      font-size: 14px;
+      font-weight: 500;
+      color: #808080;
+      margin-bottom: 14px;
+      text-align: unset !important;
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
+}
+
 .contact-us {
   width: 100%;
   padding: 50px 0px;
